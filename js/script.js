@@ -44,6 +44,7 @@ const calcRes = () => {
             }
         }
     }
+    findPercent();
     document.querySelector('.result').innerHTML = res;
     updateEq();
 }
@@ -59,9 +60,9 @@ const validateEq = () => {
                 numIdx--;
             }
             let numPercent = equation.slice(numIdx + 1, i);
-
             console.log(`i:${i}; numIdx:${numIdx}`);
             console.log(numPercent);
+            return numPercent;
         }
     }
 }
@@ -79,4 +80,25 @@ const operatorPress = (char) => {
 
 const hide = () => {
     document.getElementById('standard').style.display = "none";
+}
+
+const findPercent = () => {
+    numPercent = validateEq();
+    let numBeforePercent = '';
+        for (let i = equation.indexOf(numPercent[0]) - 2; i >= 0; i--) {
+            if (isNaN(equation[i])) {
+                break;
+            }
+            numBeforePercent += equation[i];
+        }
+        numBeforePercent = reverseString(numBeforePercent);
+        let result = (numBeforePercent / 100) * numPercent;
+        console.log(`percent ${numPercent}`);
+        console.log(`nbp ${numBeforePercent}`);
+        console.log(`result: ${result}`);
+        equation.replace('%', '');
+        equation.replace(numPercent, result);
+}
+const reverseString = (str) => {
+    return [...str].reverse().join('');
 }
