@@ -103,7 +103,7 @@ const parseFactorial = () => {
             if (!isNaN(equation[i - 1])) {
                 let numStart = i - 1;
                 for (;numStart >= 0; numStart--) {
-                    if (numStart === 0 || isNaN(numStart)) {
+                    if (numStart === 0 || isNaN(equation[numStart - 1])) {
                         break;
                     }
                 }
@@ -111,6 +111,20 @@ const parseFactorial = () => {
                     equation.slice(numStart, i+1),
                     `factorial(${equation.slice(numStart, i)})`
                 );
+            }
+            else if (equation[i-1] === ')') {
+                console.log("Inside bracket factorial");
+                let numStart = i - 1;
+                for (;numStart >= 0; numStart--) {
+                    if (numStart === 0 || equation[numStart - 1] === '(') {
+                        break;
+                    }
+                }
+                equation = equation.replace(
+                    equation.slice(numStart, i+1),
+                    `factorial(${equation.slice(numStart, i)})`
+                );
+                console.log(equation);
             }
         }
     }

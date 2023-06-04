@@ -11,6 +11,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+input {
+    border: 2px solid var(--background-dark);
+    transition: 0.2s;
+}
+
 
 .main {
     display: flex;
@@ -155,7 +160,7 @@
 
 .metrics {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
 }
 
 .metric {
@@ -168,4 +173,15 @@
     color: black;
     border: 1px solid var(--background-dark);
     transition: 0.2s;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.metric > * {
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 3px;
 }
