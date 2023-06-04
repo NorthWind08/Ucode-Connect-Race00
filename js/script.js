@@ -306,7 +306,7 @@ const convertLenght = () => {
         }
       };
     var result = inputValue * matrics[inputMatric][outputMatric];
-    document.getElementById("lenghtResultInput").value = result.toFixed(1);
+    document.getElementById("lenghtResultInput").value = result.toFixed(6);
 }
 const convertMass = () => {
     var inputValue = parseFloat(document.getElementById("massValueInput").value);
@@ -350,7 +350,7 @@ const convertMass = () => {
         }
       };
     var result = inputValue * matrics[inputMatric][outputMatric];
-    document.getElementById("massResultInput").value = result.toFixed(1);
+    document.getElementById("massResultInput").value = result.toFixed(6);
 }
 const convertArea = () => {
     var inputValue = parseFloat(document.getElementById("areaValueInput").value);
