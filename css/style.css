@@ -128,3 +128,44 @@
 #converter-btn {
 
 }
+
+.input {
+    background-color: #05BFDB;
+}
+
+.input:hover {
+    background-color: #00FFCA;
+}
+
+.convertButton {
+    background-color: #05BFDB;
+}
+
+.convertButton:hover {
+    background-color: #00FFCA;
+}
+
+.convertSlector {
+    background-color: #05BFDB;
+}
+
+.convertSlector:hover {
+    background-color: #00FFCA;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.metric {
+    padding: 1.5rem;
+    background-color: #42faf7;  
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    border: 1px solid var(--background-dark);
+    transition: 0.2s;
+}

@@ -62,33 +62,71 @@
                 <span id="converter-input" class="eq-input">Converter</span>
                 <span class="converter-result">0</span>
             </div>
-            <div id="standard" class="operators">
-                <button onclick="clearEq()" class="operator">C</button>
-                <button onclick="operatorPress('^')" class="operator">^</button>
-                <button onclick="operatorPress('%')" class="operator">%</button>
-                <button onclick="operatorPress('/')" class="operator">/</button>
-
-                <button onclick="operatorPress('7')" class="operator">7</button>
-                <button onclick="operatorPress('8')" class="operator">8</button>
-                <button onclick="operatorPress('9')" class="operator">9</button>
-                <button onclick="operatorPress('*')" class="operator">*</button>
-
-                <button onclick="operatorPress('4')" class="operator">4</button>
-                <button onclick="operatorPress('5')" class="operator">5</button>
-                <button onclick="operatorPress('6')" class="operator">6</button>
-                <button onclick="operatorPress('+')" class="operator">+</button>
-
-                <button onclick="operatorPress('1')" class="operator">1</button>
-                <button onclick="operatorPress('2')" class="operator">2</button>
-                <button onclick="operatorPress('3')" class="operator">3</button>
-                <button onclick="operatorPress('-')" class="operator">-</button>
-
-                <button onclick="operatorPress('0')" class="operator">0</button>
-                <button onclick="operatorPress('.')" class="operator">.</button>
-                <button onclick="calcRes()" class="equals operator">=</button>
-                <button onclick="backSpace()" class="equals operator"><</button>
+            <div id="standard" class="metrics">
+                <div id="lenghtConvertor" class="metric">
+                    <input type="text" id="lenghtValueInput" class="input" placeholder="value"/>
+                    <select id="inputLenghtMatric" class="convertSlector">
+                        <option value="cm">Centimeters</option>
+                        <option value="m">Meters</option>
+                        <option value="km">Kilometers</option>
+                        <option value="in">Inches</option>
+                        <option value="ft">Feet</option>
+                        <option value="yd">Yards</option>
+                        <option value="mi">Miles</option>
+                    </select>
+                    <input type="text" id="lenghtResultInput" class="input" placeholder="result" readonly />
+                    <select id="outputLenghtMatric" class="convertSlector">
+                        <option value="cm">Centimeters</option>
+                        <option value="m">Meters</option>
+                        <option value="km">Kilometers</option>
+                        <option value="in">Inches</option>
+                        <option value="ft">Feet</option>
+                        <option value="yd">Yards</option>
+                        <option value="mi">Miles</option>
+                    </select>
+                    <button onclick="convertLenght()" id="convertLenghtButton" class="convertButton">Convert</button>
+                </div>
+                <div id="massConvertor" class="metric">
+                    <input type="text" id="massValueInput" class="input" placeholder="value"/>
+                    <select id="inputMassMatric" class="convertSlector">
+                        <option value="mg">Milligrams</option>
+                        <option value="g">Grams</option>
+                        <option value="kg">Kilograms</option>
+                        <option value="lb">Pounds</option>
+                        <option value="oz">Ounces</option>
+                    </select>
+                    <input type="text" id="massResultInput" class="input" placeholder="result" readonly />
+                    <select id="outputMassMatric" class="convertSlector">
+                        <option value="mg">Milligrams</option>
+                        <option value="g">Grams</option>
+                        <option value="kg">Kilograms</option>
+                        <option value="lb">Pounds</option>
+                        <option value="oz">Ounces</option>
+                    </select>
+                    <button onclick="convertMass()" id="convertMassButton" class="convertButton">Convert</button>
+                </div>
+                <div id="areaConvertor" class="metric">
+                    <input type="text" id="areaValueInput" class="input" placeholder="value"/>
+                    <select id="inputAreaMatric" class="convertSlector">
+                        <option value="sqcm">Square Centimeters</option>
+                        <option value="sqm">Square Meters</option>
+                        <option value="ha">Hectares</option>
+                        <option value="sqft">Square Feet</option>
+                        <option value="sqyd">Square Yards</option>
+                        <option value="acre">Acres</option>
+                    </select>
+                    <input type="text" id="areaResultInput" class="input" placeholder="result" readonly />
+                    <select id="outputAreaMatric" class="convertSlector">
+                        <option value="sqcm">Square Centimeters</option>
+                        <option value="sqm">Square Meters</option>
+                        <option value="ha">Hectares</option>
+                        <option value="sqft">Square Feet</option>
+                        <option value="sqyd">Square Yards</option>
+                        <option value="acre">Acres</option>
+                    </select>
+                    <button onclick="convertArea()" id="convertAreaButton" class="convertButton">Convert</button>
+                </div>
             </div>
-            
         </div>
         <div class="wrapper-modes">
             <button onclick="showBasic()" id="basic-btn" class="mode-btn equals operator">Basic</button>
