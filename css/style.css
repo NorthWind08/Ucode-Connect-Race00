@@ -4,32 +4,42 @@
     --background: #00FFCA;
     --main-dark: #088395;
     --background-dark: #0A4D68;
+    --mode: #42faf7;
 }
 
 * {
     font-family: 'Open Sans', sans-serif;
 }
 
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
     width: 20%;
+    align-items: center;
     padding: 2rem;
     margin: 3rem;
     background-color: var(--background-dark);
+    margin-bottom: 0;
 }
 
 .operators {
     width: 100%;
     display: grid;
-    grid-template:
+    /* grid-template:
                 "a b c d" 
                 "e f g h" 
                 "i j k l" 
                 "m n o p" 
-                "q r equals equals"
+                "q r equals equals" */
+                grid-template-columns: repeat(4, 1fr);
 }
 
 .operator {
@@ -45,7 +55,6 @@
 }
 
 .equals {
-    grid-area: "equals";
     background-color: var(--background);
 }
 
@@ -89,4 +98,33 @@
 
 .result, .eq-input {
     margin-right: 1rem;
+}
+
+.mode-btn {
+    background-color: var(--mode);
+}
+
+.wrapper-modes {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+    align-items: center;
+    padding: 0.73rem;
+    /* margin: 3rem; */
+    background-color: var(--background-dark);
+    justify-content: center;
+    align-items: center;
+}
+
+#basic-btn {
+
+}
+
+#advanced-btn {
+
+}
+
+#converter-btn {
+
 }

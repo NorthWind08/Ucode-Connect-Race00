@@ -8,38 +8,94 @@
     <link rel="stylesheet" href="css/style.css"">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="text-field">
-            <span id="eq-input" class="eq-input">Enter equation</span>
-            <span class="result">0</span>
+    <main class="main">
+        <div class="wrapper" id="basic">
+            <div class="text-field">
+                <span id="eq-input" class="eq-input">Enter equation</span>
+                <span class="result">0</span>
+            </div>
+            <div id="standard" class="operators">
+                <!-------------------|ADVANCED SECTION|------------------->
+                <button id="sin" onclick="operatorPress('sin')" class="operator">sin</button>
+                <button id="cos" onclick="operatorPress('cos')" class="operator">cos</button>
+                <button id="tan" onclick="operatorPress('tan')" class="operator">tan</button>
+                <button id="pi" onclick="operatorPress('π')" class="operator">π</button>
+
+                <button id="open-bracket" onclick="operatorPress('(')" class="operator">(</button>
+                <button id="close-bracket" onclick="operatorPress(')')" class="operator">)</button>
+                <button id="factorial" onclick="operatorPress('!')" class="operator">!</button>
+                <button id="square-root" onclick="operatorPress('√')" class="operator">√</button>
+                <!-------------------|ADVANCED SECTION|------------------->
+
+
+
+                <button onclick="clearEq()" class="operator">C</button>
+                <button onclick="operatorPress('^')" class="operator">^</button>
+                <button onclick="operatorPress('%')" class="operator">%</button>
+                <button onclick="operatorPress('/')" class="operator">/</button>
+
+                <button onclick="operatorPress('7')" class="operator">7</button>
+                <button onclick="operatorPress('8')" class="operator">8</button>
+                <button onclick="operatorPress('9')" class="operator">9</button>
+                <button onclick="operatorPress('*')" class="operator">*</button>
+
+                <button onclick="operatorPress('4')" class="operator">4</button>
+                <button onclick="operatorPress('5')" class="operator">5</button>
+                <button onclick="operatorPress('6')" class="operator">6</button>
+                <button onclick="operatorPress('+')" class="operator">+</button>
+
+                <button onclick="operatorPress('1')" class="operator">1</button>
+                <button onclick="operatorPress('2')" class="operator">2</button>
+                <button onclick="operatorPress('3')" class="operator">3</button>
+                <button onclick="operatorPress('-')" class="operator">-</button>
+
+                <button onclick="operatorPress('0')" class="operator">0</button>
+                <button onclick="operatorPress('.')" class="operator">.</button>
+                <button onclick="backSpace()" class="equals operator"><</button>
+                <button onclick="calcRes()" class="equals operator">=</button>
+            </div>
+            
         </div>
-        <div id="standard" class="operators">
-            <button onclick="clearEq()" class="operator">C</button>
-            <button onclick="operatorPress('^')" class="operator">^</button>
-            <button onclick="operatorPress('%')" class="operator">%</button>
-            <button onclick="operatorPress('/')" class="operator">/</button>
 
-            <button onclick="operatorPress('7')" class="operator">7</button>
-            <button onclick="operatorPress('8')" class="operator">8</button>
-            <button onclick="operatorPress('9')" class="operator">9</button>
-            <button onclick="operatorPress('*')" class="operator">*</button>
+        <div class="wrapper" id="converter">
+            <div class="text-field">
+                <span id="converter-input" class="eq-input">Converter</span>
+                <span class="converter-result">0</span>
+            </div>
+            <div id="standard" class="operators">
+                <button onclick="clearEq()" class="operator">C</button>
+                <button onclick="operatorPress('^')" class="operator">^</button>
+                <button onclick="operatorPress('%')" class="operator">%</button>
+                <button onclick="operatorPress('/')" class="operator">/</button>
 
-            <button onclick="operatorPress('4')" class="operator">4</button>
-            <button onclick="operatorPress('5')" class="operator">5</button>
-            <button onclick="operatorPress('6')" class="operator">6</button>
-            <button onclick="operatorPress('+')" class="operator">+</button>
+                <button onclick="operatorPress('7')" class="operator">7</button>
+                <button onclick="operatorPress('8')" class="operator">8</button>
+                <button onclick="operatorPress('9')" class="operator">9</button>
+                <button onclick="operatorPress('*')" class="operator">*</button>
 
-            <button onclick="operatorPress('1')" class="operator">1</button>
-            <button onclick="operatorPress('2')" class="operator">2</button>
-            <button onclick="operatorPress('3')" class="operator">3</button>
-            <button onclick="operatorPress('-')" class="operator">-</button>
+                <button onclick="operatorPress('4')" class="operator">4</button>
+                <button onclick="operatorPress('5')" class="operator">5</button>
+                <button onclick="operatorPress('6')" class="operator">6</button>
+                <button onclick="operatorPress('+')" class="operator">+</button>
 
-            <button onclick="operatorPress('0')" class="operator">0</button>
-            <button onclick="operatorPress('.')" class="operator">.</button>
-            <button onclick="calcRes()" class="equals operator">=</button>
+                <button onclick="operatorPress('1')" class="operator">1</button>
+                <button onclick="operatorPress('2')" class="operator">2</button>
+                <button onclick="operatorPress('3')" class="operator">3</button>
+                <button onclick="operatorPress('-')" class="operator">-</button>
+
+                <button onclick="operatorPress('0')" class="operator">0</button>
+                <button onclick="operatorPress('.')" class="operator">.</button>
+                <button onclick="calcRes()" class="equals operator">=</button>
+                <button onclick="backSpace()" class="equals operator"><</button>
+            </div>
+            
         </div>
-    </div>
-
+        <div class="wrapper-modes">
+            <button onclick="showBasic()" id="basic-btn" class="mode-btn equals operator">Basic</button>
+            <button onclick="showAdvanced()" id="advanced-btn" class="mode-btn equals operator">Advanced</button>
+            <button onclick="showConverter()" id="converter-btn" class="mode-btn equals operator">Converter</button>
+        </div>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>
